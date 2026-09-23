@@ -1,0 +1,85 @@
+CSS (Cascading Style Sheets)
+	How HTML Elements are displayed on the screen 
+	
+CSS Files (external stylesheets)
+
+CSS Example: 
+		body {
+		  background-color: lightblue;
+		}
+		
+		h1 {
+		  color: white;
+		  text-align: center;
+		}
+		
+		p {
+		  font-family: verdana;
+		  font-size: 20px;
+		}
+		
+CSS Syntax: 
+h1 (selector) {color:blue (declaration);font-size:12px (declaration)}
+
+Example: 
+p {  
+	color: red;
+	text-align:center;
+	}
+
+Selector = Points to HTML Element you want to style (p)
+Declaration = Contains CSS Property Name + Value (color: red;)
+Declaration Box = Contains 1 or more Declarations 
+	contained within {curly brackets}
+	separated by ;
+
+
+CSS Selectors = Select HTML Elements to be Styled 
+	Simple Selectors = Select based on name,id,class
+	Combinator Selectors = Select based on a specific relationship between them 
+	Psuedo-class Selectors = Select based on certain state 
+	Psuedo-element Selectors = Select and Style part of an Element 
+	Attribute Selectors = Select Elements based on an attribute / attritubte value 
+
+
+
+Element Selectors [based on the Element Name]
+		p {
+		text-align: center;
+		color:red;
+		}
+	All Elements named 'p' are going to be aligned center + red
+
+
+CSS id Selector [based on id attribute of Element]
+	used to select 1 unique element(written as #id))
+	
+		#para1 { 
+		text-align: center;
+		color:red;
+		}
+		
+HTML Class = Attribute inside Elements Opening 
+	<p class="error-message">Error Messages have Different Styling.</p>		
+		
+CSS Class Selector [based on specific Class attribute]
+	Specific Class (written .className)
+	
+	p.error-message {
+	text-align: center;
+	color:red;
+	}
+
+
+
+	
+	
+
+
+		
+
+	
+	
+	
+
+
