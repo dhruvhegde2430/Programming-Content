@@ -27,10 +27,10 @@ After doing this, you may fix the identity used for this commit with:
  	git init 
  	
  Stage File for Commit 
- 	git add <filename>    --- example: git add "html 101.html"
+ 	git add <filename>    --- example: git add html 101.html
  	
  Commit (create snapshot) 
- 	git commit -m "Message of Change" 
+ 	git commit -m "CommitName" 
  	
 git log --oneline          # Show commit history in short form
 git log                    # Show detailed commit history (author, date, full hash)

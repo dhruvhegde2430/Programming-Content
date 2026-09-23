@@ -100,5 +100,227 @@ Empty Tags = No End Tags
  <pre> tag -- defines and used Pre-formatted Text 
  
  
+ 
+ HTML Style Attribute 
+ <tagname Style="property:value;"> 
+ 
+ Property Examples:
+ 	background-color
+ 	font-family
+ 	color
+ 	text-align
+ 	font-size 
+ 	
+ Value Examples: 
+ 	blue/red/Tomato/..
+ 	60px 
+ 	Verdana
+ 	center/right/left
+ 	
+ 	
+HTML Text Formatting Elements 
+	<b>Bold Text</b>
+	<strong>Strong (important) Text</strong>
+	<i>Italic Text</i>
+	<em>Emphasized Text</em>
+	<mark>Marked Text</mark>
+	<small>Smaller Text</small>
+	<del>Deleted Text</del>
+	<ins>Inserted Text</ins>
+	<sub>Subscript Text</sub>
+	<sup>Superscript Text</sup>
 	
 
+Blockquote Tag --> <blockquote cite="https://www.source.com"></blockquote>
+- Defines section that is quoted from another source
+
+Other Relevant Tags 
+	<q>Short Quotation "text"</q>
+	<abbr title="Abbreviation Meaning">Abbreviation</abbr>
+	<cite> Defines title of Creative Work</cite>
+	<bdo dir="rtl">Overrides Text Direction</bdo>
+	<address>Defines Contact Information for Author/Owner</address>
+	
+HTML Comments <!--  Written Like This -->
+
+HTML Colors (written within Tag) --> <q Style="color:blue"></q> 
+	Examples Below:
+	<q style="background-color:Tomato; color:Orange; border:2px solid Violet"> Quote with Attributes </q>
+
+
+Color Value
+
+RBG (red, green, blue)	
+
+Written rgb(0,1,256) --> #0 to 256 (Intensity of Color (rgb))
+
+(256,0,0) --> Red (Intense)
+(0,256,0) --> Green (Intense)
+
+rgb(10,100,200) --> 1 Color (Mix of '10' Red, '100' Green, '200' Blue)
+
+Shades of Grey --> rgb(X,X,X) --> All the Same # = Grey
+	Lower # = Darker 
+	Higher # = Lighter
+	
+
+RGBA (Red, Green, Blue, Alpha)
+	Alpha = Opacity (transparency) 
+	Alpha = 0.0 to 1.0	
+		0.0 = Fully Transparent 
+		1.0 = Not Transparent 
+		
+HEX Color Values: #rrggbb --> same structure of rgb()
+	Value: Between 00 (lowest) and FF (highest)
+#00FF00 = Green 	
+	
+Values are 0-9, followed by A(10) to F(15) --> 00 (lowest) and FF (highest)
+	
+	
+	
+HEXA Value --> #rrggbbAA
+	AA = Alpha [00 (lowest) and FF (highest)]
+	
+Shades of Grey (Same for All 3) --> #4A4A4A (shade of grey)
+
+HSL Colors (hue, saturation, lightness) 
+	hue = degree on color wheel (0-360)
+			0 = red
+			120 = green 
+			240 = blue
+	Saturation = saturation of color (percentage)
+			0% = Shade of Gret 
+			100% = Full Color 
+	Lightness (percentage)
+			0% = Black 
+			100% = White 
+			
+	ex) HSL (120,50%,50%) --> Green 
+	
+
+HSLA (hue,saturation,lightness.Alpha)
+	Alpha --> 0.0 to 1.0
+		
+
+		
+		
+		
+		
+HTML Styles (Cascading Style Sheets 'CSS')
+	CSS = Styles and Colors 
+
+3 Ways to Add CSS to HTML Documents 
+	
+	Inline = Style Attribute inside Element 
+		<q style="property:value";></q>
+		
+	Internal = Style Element 
+		<style>
+	        body {
+	            background-color: #f4f4f4;
+	            font-family: Arial, sans-serif;
+	        }
+	        h1 {
+	            color: navy;
+	            text-align: center;
+	        }
+	        p {
+	            font-size: 16px;
+	            line-height: 1.5;
+	            color: #333333;
+	        }
+    	</style>
+	
+
+	External = Link Element to External CSS File
+		<head>
+		    <meta charset="UTF-8">
+		    <title>External Style Example</title>
+		    <!-- The external style element linking to the CSS file -->
+		    <link rel="stylesheet" href="styles.css">
+		</head>
+	
+	
+	
+HTML Links --> 
+	<a href ="www.google.com" target="_blank">Link Text Here - Open Link in a New Tab</a>
+	
+
+Target Attribute (links) --> Where to Open Linked Document 
+	_self = same window/tab 
+	_blank = new window/tab 
+	_parent = in the parent frame 
+	_top = in the full body of the window 
+	
+Absolute URL = Full Web Address 
+Relative URL = Link to page in the same website (without https://www.)
+
+Use Image as a Link (Put img tag inside of a link tag)
+	<a href="www.google.com"> <img google image> </a>
+	
+Link to Email Address 
+	<a href="mailto:someone@example.com">Send Email functionality enabled here</a>
+	
+Button as a Link 
+	<button onclick="window.location.href='https://example.com';">
+  		Go to Example
+	</button>
+	
+	
+Link Colors 
+	Default Link Colors: 
+		Unvisited = underlinked + blue
+		Visited = underlined + purple
+		Active = underlined + red 
+		
+Change Link Colors --> set individually 
+	<style>
+        Unvisited link (Default state) */
+        a:link {
+            color: #008000; /* Green */
+            text-decoration: none; /* Removes the underline */
+        }
+
+        Visited link (A link the user has already clicked) */
+        a:visited {
+            color: #800080; /* Purple */
+        }
+
+        Hover state (When the mouse cursor is over the link) */
+        a:hover {
+            color: #FF4500; /* Orange-Red */
+            text-decoration: underline; /* Adds the underline back */
+        }
+
+        Active link (The moment the link is being clicked) */
+        a:active {
+            color: #FFD700; /* Gold */
+        }
+    </style>
+		
+	
+Bookmark in HTML --> id attribute to create bookmark 
+
+	<h2 id="C4">Chapter 4</h2> --> ID Attribute 
+	
+	<a hred="#C4"> Jump to Chapter 4 when Clicking Link </a> --> Link to Jump to where Id Attritute is 
+	
+
+
+HTML Images 
+	<img src="url" alt="alttext" width="500" height="1000"> 
+	
+	2 Required Attributes 
+		src = source of image 
+			URL 
+			Another Folder --> file path
+			Animated Images (gif) 
+			Image Files (png, jped,apng,etc..)
+			
+		alt = alternative text if image cannot be displayed 
+		
+Style Attributes (img) --> Width + Height 
+
+
+Image Map --> Image with Clickable Areas (Multiple Links) <map> Image Map Tab</map>
+	
