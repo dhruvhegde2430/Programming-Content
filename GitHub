@@ -10,7 +10,6 @@ Optional. View Commit History --> git log --oneline
 
 
 
-Commit+ Push Changes to Github 
 Initial Commit
 git commit -m "Initial commit"
 
