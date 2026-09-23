@@ -1,0 +1,60 @@
+Basic Steps to Push Changes to Github 
+1. Make  Changes to File(s) 
+2. Add Files to Git --> git add "FileName"
+3. Commit Changes --> git commit -m"CommitName" 
+
+Optional. View Files Present --> git ls-files
+Optional. View Commit History --> git log --oneline 
+
+4. Push Changes to Github --> git push -u origin master/main  
+
+
+
+Commit+ Push Changes to Github 
+Initial Commit
+git commit -m "Initial commit"
+
+Another Commit Message 
+	git commit -m "Add Github101 File" 
+
+Run the following command and follow the instructions in your editor to edit
+your configuration file:
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+    git commit --amend --reset-author
+    
+ Initialize a new Git Repository 
+ 	git init 
+ 	
+ Stage File for Commit 
+ 	git add <filename>    --- example: git add "html 101.html"
+ 	
+ Commit (create snapshot) 
+ 	git commit -m "Message of Change" 
+ 	
+git log --oneline          # Show commit history in short form
+git log                    # Show detailed commit history (author, date, full hash)
+git log -- <filename>      # Show history for a specific file
+git diff <commit1> <commit2>  # Compare differences between two commits
+
+d32d978 --Commit Hash (ID) -- Initial Commit
+
+git checkout <commit hash>   #view project as it was at that current state 
+git reset --hard <commit hash> 	#Delete + Goes Back to commit mentioned 
+git revert <commit hash> 	#Undo  without Deleting History 
+
+git checkout master/main 	#return to latest commit on your branch 
+
+git ls-files 	#Shows which Files are going to be Uploaded to GitHub 
+
+git remote add origin <repositoryURL> 	#Links Local Repo to Github
+
+
+git push -u origin master/main 
+
+
+
+
+
+ 
