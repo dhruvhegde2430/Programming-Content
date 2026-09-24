@@ -2,8 +2,8 @@
 Cheat Sheet of Programming Content
 
 Currently Includes: 
-HTML 
-Github 
-CSS 
+HTML; 
+Github;
+CSS; 
 
 
