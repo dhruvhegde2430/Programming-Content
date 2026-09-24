@@ -70,14 +70,39 @@ CSS Class Selector [based on specific Class attribute]
 	color:red;
 	}
 
+HTML Elements can refer to more than 1 Class 
+	<p class="center large"> This paragraph refers to 2 classes.</p>
+
+
+
+Universal Selector (*) = Selects all HTML Elements on the page 
+
+* {
+	text-align: center;
+	color: blue;
+}
+
+
+CSS Grouping Selector = Selects all HTML Elements with the same style definitions 
+
+	h1, h2, p {
+	  text-align: center;
+	  color: red;
+	}			
+
+
+All CSS Simple Selectors 
+	#idName = selects element with id="idName"
+	.className = selects elements with class="className"
+	* = selects all element 
+	elementName { }= selects all <elementName> elements 
+	e1,e2,e3,e4 { } = selects all <e1>,<e2>,..
+	
+
+
 
 
 	
-	
-
-
-		
-
 	
 	
 	
