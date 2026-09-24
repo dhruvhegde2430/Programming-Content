@@ -100,11 +100,219 @@ All CSS Simple Selectors
 	
 
 
+Inserting a CSS Style Sheet 
+	1. External CSS (Link to external .css File) 
+	2. Internal CSS (<style> Element in the head section)
+	3. Inline CSS (style attribute on HTML elements) 
 
 
+External CSS Sheet with Link
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<link rel="stylesheet" href="mystyle.css">
+		</head>
+		<body>
+		<h1>This is a heading</h1>
+		<p>This is a paragraph.</p>
+		</body>
+		</html>
+
+						style.css file (separate) [ 
+						body {
+						  background-color: lightblue;
+						}
+						
+						h1 {
+						  color: navy;
+						  margin-left: 20px;
+						}
+						] 
+
+
+Internal CSS 
+
+		<head>
+		<style>
+		body {
+		  background-color: linen;
+		}
+		
+		h1 {
+		  color: maroon;
+		  margin-left: 40px;
+		}
+		</style>
+		</head>
+		<body>
+	
+
+
+Inline CSS 
+
+	<h1 style="color:blue;text-align:center;">This is a heading</h1>
+	<p style="color:red;">This is a paragraph.</p>
+	
+
+
+
+
+Multiple Style Sheets: 
+If a Property has been defined for the same Element in different style sheets multiple times, 
+the Value from the Last Read Style Sheet will be Used 
+
+Example 1 ) 
+Style Sheet Defines h1 color:navy 
+Manual Defines h1 color:orange 
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">  
+<style>
+h1 {
+  color: orange;
+}
+</style>
+</head>
+
+h1 = Orange (Manual h1) = Came After (Last Read) 
+
+
+Example 2 ) 
+Style Sheet Defines h1 color:navy 
+Manual Defines h1 color:orange 
+
+<head>
+<style>
+h1 {
+  color: orange;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+h1 = navy (mystyle.css) = Came After (Last Read) 
+
+
+
+
+Cascading Order (Priority) 
+	1. Inline Style inside HTML Element (Highest Priority) 
+	2. External and Internal Style Sheets in the <head> section 
+	3. Browser default 
+
+
+CSS Comments 
+/* This is a mid line comment, single line comment 
+Or A Multi-Line Comment depending on where you end it with this symbol --> */ 
+
+
+
+CSS Examples Below: 
+	<h1 style="background-color:DodgerBlue;">Hello World</h1>
+	<p style="background-color:Tomato;">Lorem ipsum...</p>
+	
+	<h1 style="color:Tomato;">Hello World</h1>
+	<p style="color:DodgerBlue;">Lorem ipsum...</p>
+	<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+	
+	<h1 style="border:2px solid Tomato;">Hello World</h1>
+	<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+	<h1 style="border:2px solid Violet;">Hello World</h1>
+	
+	<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+	<h1 style="background-color:#ff6347;">...</h1>
+	<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+	
+	<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+	<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+
+
+HTML Colors (written within Tag) --> <q Style="color:blue"></q> 
+	Examples Below:
+	<q style="background-color:Tomato; color:Orange; border:2px solid Violet"> Quote with Attributes </q>
+
+
+Color Value
+
+RBG (red, green, blue)	
+
+Written rgb(0,1,256) --> #0 to 256 (Intensity of Color (rgb))
+
+(256,0,0) --> Red (Intense)
+(0,256,0) --> Green (Intense)
+
+rgb(10,100,200) --> 1 Color (Mix of '10' Red, '100' Green, '200' Blue)
+
+Shades of Grey --> rgb(X,X,X) --> All the Same # = Grey
+	Lower # = Darker 
+	Higher # = Lighter
+	
+
+RGBA (Red, Green, Blue, Alpha)
+	Alpha = Opacity (transparency) 
+	Alpha = 0.0 to 1.0	
+		0.0 = Fully Transparent 
+		1.0 = Not Transparent 
+		
+HEX Color Values: #rrggbb --> same structure of rgb()
+	Value: Between 00 (lowest) and FF (highest)
+#00FF00 = Green 	
+	
+Values are 0-9, followed by A(10) to F(15) --> 00 (lowest) and FF (highest)
 	
 	
 	
+HEXA Value --> #rrggbbAA
+	AA = Alpha [00 (lowest) and FF (highest)]
 	
+Shades of Grey (Same for All 3) --> #4A4A4A (shade of grey)
+
+HSL Colors (hue, saturation, lightness) 
+	hue = degree on color wheel (0-360)
+			0 = red
+			120 = green 
+			240 = blue
+	Saturation = saturation of color (percentage)
+			0% = Shade of Gret 
+			100% = Full Color 
+	Lightness (percentage)
+			0% = Black 
+			100% = White 
+			
+	ex) HSL (120,50%,50%) --> Green 
+	
+
+HSLA (hue,saturation,lightness.Alpha)
+	Alpha --> 0.0 to 1.0
+
+
+
+
+
+CSS Backgrounds 
+background-color = Background Color of An Element 
+		background-color: lightblue;
+background-image = Specifies Image to use as background of an element 
+		background-image: url("paper.gif");
+background-repeat = Sets if/how a background image will be repeated 
+		default = repeated both vertically + horizontally 
+		only horizontally = background-repeat: repeat-x;
+		only vertically = background-repeat: repeat-y;
+		only once = background-repeat: no-repeat;	
+background-attachment = Specifies whether background image should Scroll or Be Fixed (will not scroll with page) 
+		background-attachment: fixed;
+		background-attachment: scroll;
+background-position = used to set Starting Position of background image 
+		background-position: right top;
+background = Specifies All Background Properties in 1 single property 
+		body {
+			background: #ffffff url("img_tree.png") no-repeat right top;
+		}
+
+background-clip = Specifies painting area of the background 
+background-origin = Specifies where background image is positiioned 
+background-size = Specifies size of background 
+
 
 
